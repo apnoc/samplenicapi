@@ -1,0 +1,189 @@
+
+import React, {Component} from 'react';
+import {Carousel} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import Header from '../components/header/Header';
+
+import data from '../Data/data.json';  
+
+
+class Home extends Component {
+	render() {
+		return (
+            <div>
+                	 <Header /> 
+                {
+                  data.HomePages.map((HomePage) => {
+                    return (
+			<div>
+   <section className="testimonials">
+
+                <div className="fixed-bnr">
+                        <Carousel className="container" >
+                          <Carousel.Item interval={1000}>
+                            <img
+                              className="d-block w-100"
+                              src="/assets/Banner-1.jpg"
+                              alt="First slide"
+                            />
+
+                          </Carousel.Item>
+                          <Carousel.Item interval={1000}>
+                            <img
+                              className="d-block w-100"
+                              src="/assets/Banner-2.jpg"
+                              alt="Second slide"
+                            />
+
+                          </Carousel.Item>
+                          <Carousel.Item interval={1000}>
+                            <img
+                              className="d-block w-100"
+                              src="/assets/Banner-3.jpg"
+                              alt="Third slide"
+                            />
+
+                          </Carousel.Item>
+                          <Carousel.Item>
+                                                                <img
+                                                                  className="d-block w-100"
+                                                                  src="/assets/Banner-4.jpg"
+                                                                  alt="Fourth slide"
+                                                                />
+
+                                                              </Carousel.Item>
+                           <Carousel.Item>
+                                      <img
+                                        className="d-block w-100"
+                                        src="/assets/Banner-5.jpg"
+                                        alt="Fifth slide"
+                                      />
+
+                                    </Carousel.Item>
+
+                        </Carousel>
+                        </div>
+                 </section>
+
+                        <section className="container" >
+                                        <h3 className="text-center m-4">{HomePage.namee}</h3>
+                                       <div className="row">
+                                            <section className="col-lg-8 p-4">
+                                                <p className="text-justify">
+                                               {HomePage.p}
+                                                </p>
+                                                <a href="#" class="btn btn-danger">{HomePage.button}</a>
+                                                </section>
+                                                <section  className="images col-lg-4 p-4">
+                                                    <img className="img-thumbnail float-left" src={HomePage.img}/>
+
+                                            </section>
+                                         </div>
+                                </section> 
+					 <section className="wrappers">
+                                       {
+                                          HomePage.Wrapper.map((WrapperDetail) => {
+                                            return (
+                                                <section className="container">
+                                                    <div className="row">
+                                                        <div className="col-4  p-2 text-center">
+                                                            <img  className="" src={WrapperDetail.img} />
+                                                            <h3 className="m-3" >{WrapperDetail.header}  </h3>
+                                                            <p > {WrapperDetail.paragraph}         </p>
+                                                   </div>                  
+                                                    </div>
+                                        </section>
+                                            );
+                                          })
+                                          
+                                       }
+                                    </section>
+
+					
+                                   
+ <section className="container">
+				 	
+           <h2 className="my-4"> Directory </h2>
+                 
+                          
+                        <div className="col-xs-12">
+                               <div className=" p-2" style={{backgroundColor:"#005a87",color:"#fff"}}>
+             <h4>{directory.title}</h4> 
+                             </div>
+          <Table striped bordered hover>
+            
+                             <thead>
+                   <tr style={{backgroundColor:"#f65a64",color:"#fff"}}>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Ip Number</th>
+                  </tr>
+                </thead>
+                        
+             
+           
+        <tbody>
+                  <tr>
+                    <td><span class="bt-content"><strong>{data.namee}</strong></span></td>
+                    <td><span class="bt-content">{data.designation}</span></td>
+                    <td><span class="bt-content">{data.email}</span></td>
+                    <td><span class="bt-content">{data.phone}</span></td>
+                    <td> <span class="bt-content">{data.ipNumber}</span> </td>
+                  </tr>
+  
+                </tbody>                  
+               </Table>
+           </div>	 
+         </section> 
+    
+                			
+
+
+
+
+</div>                    
+                    );
+                  })
+                }
+
+            </div>
+        );
+    }
+} 
+export default Home;
+
+
+
+
+         <section className="container">				 
+           <h2 className="my-4"> Directory </h2>                                       
+               <div className="col-xs-12">
+                  <div className=" p-2" style={{backgroundColor:"#005a87",color:"#fff"}}>
+                      <h4>{data.title}</h4> 
+                  </div>
+              <Table striped bordered hover>
+                  <thead>
+                      <tr style={{backgroundColor:"#f65a64",color:"#fff"}}>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Ip Number</th>
+                      </tr>
+                  </thead>           
+                  <tbody>
+                            <tr>
+                              <td><span class="bt-content"><strong>{data.namee}</strong></span></td>
+                              <td><span class="bt-content">{data.designation}</span></td>
+                              <td><span class="bt-content">{data.email}</span></td>
+                              <td><span class="bt-content">{data.phone}</span></td>
+                              <td> <span class="bt-content">{data.ipNumber}</span> </td>
+                            </tr>  
+                  </tbody>                  
+                </Table>
+           </div>	 
+        </section> 
+    
+                

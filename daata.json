@@ -1,0 +1,35 @@
+   
+  
+   [
+    {
+        "id":"1", "text": "Home", "url": "home"
+    },
+    {
+        "id":"2", "text": "Services", "url": "services" 
+    },
+    {
+        "id":"3", "text": "Infrastructure", "url": "infrastructure"
+    },
+    {
+        "id":"4", "text": "Photo Gallery", "url": "photoGallery"
+    },
+    {
+        "id":"5", "text": "News", "url": "news" 
+    },
+    {
+        "id":"6", "text": "Awards", "url": "awards"
+    },
+    {
+        "id":"7", "text": "Distict Centres", "url": "districtCentres" 
+    },
+    {
+        "id":"8", "text": "Directory", "url": "directory"
+    },
+    {
+        "id":"9", "text": "Helpdesk", "url": "https://servicedesk.nic.in/"
+    }
+
+
+    
+]
+
